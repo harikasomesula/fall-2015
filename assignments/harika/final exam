@@ -1,0 +1,547 @@
+QA Masters - Final Examination
+
+Duration: 2.5 hours 
+
+Upload all answers, programs, program output to exam folder on your github repository
+
+Computers and Binary Numbers
+
+1. How many bits in a byte. How many kilobytes make a Gigabyte?
+	1 Byte = 8 bits.
+	1 Gigabytes (1GB) = 1024Megabytes(MB)
+                            = 1024*1024 Kilobytes (KB)
+                            = 1048576 KB
+2. Add the following two binary numbers and convert the result to decimal. Show detailed steps on how you did it
+100101001 + 101111011 
+
+                      
+	100101001   [297]
+101111011   [379]
+      ---------------------------
+        1010100100 [676] 
+
+1,1 = 0 and 1 reminder
+1,0,1=1,1= 0 and 1 reminder
+1,0,0 = 1 = 1 and No reminder
+1,1 = 1 = 0 and 1 Reminder
+1,0,1 = 1,1=0 and 1 reminder
+1,1,1 = 1 and 1 reminder
+1,0,1 = 1,1 = 0 and 1 reminder
+1,0,0 = 1 and No reminder
+1,1 =0 and reminder so the last is 10
+
+3. What is the difference between compiled languages and interpreted languages? How can you classify JAVA according to this.
+	
+COMPILER	INTERPRETER
+Compiler takes entire program as one input	Interpreter takes single instruction as input
+Memory Requirement is more	Memory Requirement is Less
+It executes faster	It executes slower
+Errors are displayed after entire program is checked 	Errors are displayed for every instruction interpreted 
+Example : C, C++	Examples:BASIC, Ruby, Python, JAVA
+	
+	
+
+
+	JAVA is an interpreter language, while writing a program we see errors/warring displayed on left side with red color dots, so that we can find out where we have done the mistake.
+	But I also feel it is a complier also
+Java implementations typically use a two-step compilation process. Java source code is compiled down to bytecode by the Java compiler. The bytecode is executed by a Java Virtual Machine (JVM). Modern JVMs use a technique called Just-in-Time (JIT) compilation to compile the bytecode to native instructions understood by hardware CPU on the fly at runtime.
+Some implementations of JVM may choose to interpret the bytecode instead of JIT compiling it to machine code, and running it directly. While this is still considered an "interpreter," It's quite different from interpreters that read and execute the high level source code (i.e. in this case, Java source code is not interpreted directly, the bytecode, output of Java compiler, is.) 
+It is technically possible to compile Java down to native code ahead-of-time and run the resulting binary. It is also possible to interpret the Java code directly. 
+To summarize, depending on the execution environment, bytecode can be:
+•	compiled ahead of time and executed as native code (similar to most C++ compilers)
+•	compiled just-in-time and executed
+•	interpreted
+•	directly executed by a supported processor (bytecode is the native instruction set of some CPUs)
+
+
+
+Testing Concepts
+
+4. Write few differences between Agile and Waterfall model for Software Development 
+Life Cycle. Give examples of projects where each type of SDLC model can be used.
+	Difference between Agile model and Non-Agile
+
+Parameters	Agile Model	Non-Agile Models
+Approach of this methodology	This methodology is very flexible and adjustable and can adapt to the project needs.	This methodology is not as flexible as Agile model and it’s tough to accommodate changes in the project.
+Measurement of Success	The success of the project in Agile model is measured by the Business value delivered.	In this methodology the success of the project is measured by the Conformation to plan.
+Size of the Project	The Project size is small in Agile model.	The project size is Large in non- Agile models.
+Style of Management	The style of management in Agile model is not centralized. It is distributed among the team members.	The management style in the non-Agile models is dictatorial. Only one person is the decision maker and rest of the people follows him.
+Ability to adapt to change	In Agile model the changes are accepted and adapted as per the project needs.	But in non-Agile models the changes are not accepted easily in the later stages of the development.
+Documentation required	Less documentation is required in Agile.	More documentation is required in non-Agile models.
+Importance of	In Agile model more emphasis is given to the people that means it’s People- Oriented.	In non-Agile models the more importance is given to the process hence it’s Process- Oreinted.
+Cycles or iterations	Agile methodology has many cycles or iterations which is also known as Sprints.	But, in Non-Agile methodology the cycles are limited.
+Planning in Advance	There is minimal upfront planning in Agile methodology.	In Non-Agile models the planning should be complete before the development starts.
+Revenue	In Agile method the return on investment is early in the project cycle.	In non-Agile methods the return on investment is at the end of the project.
+Size of the team	The size of the team in Agile methodology is usually small and creative.	But in Non-Agile models the team size is large.
+
+	Example of Agile software development
+
+	Example: Google is working on project to come up with a competing product for MS Word, that provides all the features provided by MS Word and any other features requested by the marketing team. The final product needs to be ready in 10 months of time. Let us see how this project is executed in traditional and Agile methodologies.
+	In traditional Waterfall model –
+	At a high level, the project teams would spend 15% of their time on gathering requirements and analysis (1.5 months)
+	20% of their time on design (2 months)
+	40% on coding (4 months) and unit testing
+	20% on System and Integration testing (2 months).
+	At the end of this cycle, the project may also have 2 weeks of User Acceptance testing by marketing teams.
+	In this approach, the customer does not get to see the end product until the end of the project, when it becomes too late to make significant changes.
+The image below shows how these activities align with the project schedule in traditional software development.
+
+ 
+
+	With Agile development methodology –
+	In the Agile approach, each project is broken up into several ‘Iterations’.
+	All Iterations should be of the same time duration (between 2 to 8 weeks).
+	At the end of each iteration, a working product should be delivered.
+	In simple terms, in the Agile approach the project will be broken up into 10 releases (assuming each iteration is set to last 4 weeks).
+	Rather than spending 1.5 months on requirements gathering, in Agile software development, the team will decide the basic core features that are required in the product and decide which of these features can be developed in the first iteration.
+	Any remaining features that cannot be delivered in the first iteration will be taken up in the next iteration or subsequent iterations, based on priority.
+	At the end of the first iterations, the team will deliver a working software with the features that were finalized for that iteration.
+	There will be 10 iterations and at the end of each iteration the customer is delivered a working software that is incrementally enhanced and updated with the features that were shortlisted for that iteration.
+The iteration cycle of an Agile project is shown in the image below.
+ 
+
+
+ 
+
+5. What are the key roles and responsibilities of a QA engineer in a Software organization?
+1.	FRS (Functional Requirement Specifications)review.
+2.	While studying if at all the QA engineer get any doubt, then he/she need to list them in a special document known as REVIEW REPORT. 
+3.	The review report is sent to the author of the document for clarifications.
+4.	Once QA engineer is clear with the requirements, then they will take a test case template & write Test Cases. 
+5.	Once the build is released the QA engineer will execute or process the Test Cases. 
+6.	If at all any defects are identified, the QA engineer will isolate them in ISOLATE PROFILE DOCUMENT. 
+7.	He/she will send the DEFECT PROFILE DOCUMENT to the development team.
+8.	Once the next build is released QA engineer will re execute the Test cases. 
+9.	If at all any defects are identified, he will further isolate & report to the development team.This process contains till the product is defect free. 
+
+6. What are the different sections contained within a test plan? Explain with examples.
+	TEST PLAN: Test Plan is a strategic document which describes how to perform testing on an application in an effective, efficient & optimized way.
+	THE TEST PLAN CONTAIN:
+
+	1.INTRODUCTION
+1.1 OBJECTIVE: The purpose of the document is clearly described here on this section.
+1.2 REFERENCE DOC: 1.2 REFERENCE DOC: 1.2 REFERENCE DOC: 1.2 REFERENCE DOC: The list of all the documents that are referred to prepare that Test Plan will be listed out here in this section.
+
+	2.COVERAGE OF TESTING: 
+
+2.1 FEATURES TO BE TESTED:
+The list of all the features within the scope are listed out here in this section.
+TEST PLAN: Specific to that particular project.
+TEST STRATEGY: Plan prepared by the organization in order to test all the projects in that organization. 
+2.2 FEATURES NOT TO BE TESTED: The list of all the features that are not planned for testing based on following criteria are listed out here in this section. 
+1. Out of scope features 
+2. Low risk features.
+3. Future functionality.
+4. Features that are skipped based on that time constraints.
+
+	3. TEST STRATEGY: It is an organizational level term used for testing all the projects in the organization.
+3.1 LEVEL OF TESTING The list of all the Level of Testing that are followed by that company are listed out here in this section.
+3.2 TYPES OF TESTING The list of all the Types of Testing that are followed by that company are listed out here in this section.
+3.3 TEST DESIGN TECHNIQUES: Technique is something used for accomplishing a complex task into a simpler one. The list of all the techniques that are followed by that company are listed out here in this section.
+
+BOUNDARY VALUE ANALYSIS: Whenever there is range kind of input then the Test engineer will use the boundary value analysis technique to develop the Test Cases for that range. The BOUNDARY VALUE ANALYSIS technique says that one can test the numerical range with 7 values. -> LB-1; LB; LB+1; MV; UB-1; UB; UB+1;
+LB-LOWER BOUND MV-MID VALUE UB-UPPER BOUND
+
+EQUIVALENCE CLASS PARTITION: Whenever there are multiple number of complex validations for a feature then the Test Engineer will use  ECP technique in order to develop the positive & negative test cases easily.
+3.4 TEST METRICS: The list of all the tasks that are planned to be measures & maintained in terms of metrics are listed out here in this section.
+3.5 TERMINOLOGY: 3.5 TERMINOLOGY: 3.5 TERMINOLOGY: 3.5 TERMINOLOGY: The list of all the terms that are user in that company will be listed out here in this section along with the abbreviations.
+3.6 AUTOMATION PLAN: 3.6 AUTOMATION PLAN: 3.6 AUTOMATION PLAN: 3.6 AUTOMATION PLAN: The list of all the areas that are planned for automation are listed out here in this section. The list of all the areas that are planned for automation are listed out here in this section.
+3.7 LIST OF AUTOMATED TOOLS: 3.7 LIST OF AUTOMATED TOOLS: 3.7 LIST OF AUTOMATED TOOLS: 3.7 LIST OF AUTOMATED TOOLS: List of all automated tools that are used by that company for automation testing will be listed out here in this section.
+
+4. BASE  CRITERIA
+4.1 ACCEPTANCE CRITERIA 
+When to stop testing, thinking that enough testing is done on that application is clearly described here in this section. 
+4.2 SUSPENSION CRITERIA 
+When to suspend testing is clearly described here in this section.
+5. TEST DELIVERABLES The list of all the outcome documents during the testing phase are listed out here in this section.
+6. TEST ENVIRONMENT The customer specified environment is clearly described here in this section.
+7. RESOURSE PLANNING Who has to do? & what he has to do? Is clearly described here in this section.
+8. SCHEDULING the starting dates & the ending dates of each & every task is clearly described here in this section.
+9. STAFFING & TRAINING How much staff is to be recruited ?what kind of training is to be provided to that newly recruited people , as well as for that existing staff in order to accomplish the project successfully is clearly described here in this section.
+10. RISKS & CONTINGENCIES
+All the potential risks & the corresponding solutions & listed here in this section.
+10.1 RISKS
+Unable to deliver the s/w within deadlines.
+Customer imposed deadlines.
+Employee may leave the org.
+Unable to test all the features with in time
+Lack of expatriation
+10.2 CONTINGENCIES
+Plan should be properly ensured.
+Features not to be tested will be increased.
+Employee need to be maintained on bench
+Severity, priority based execution.
+Training should be proved.
+
+11. ASSUMPTIONS 
+What are all the things that are to be assumed by a test engineer will be clearly mentioned here in this section.
+12. APPROVAL INFORMATION 
+who has to approve what is clearly described here in this section.
+
+Core JAVA
+
+7. Explain with examples the meaning of following Java concepts: Object oriented programming, Polymorphism and Inheritance
+	Object-Oriented Programming (OOP).
+JAVA is called Object Oriented Programming language because of its major features:
+
+1.	Encapsulation
+2.	Polymorphism
+3.	Inheritance
+4.	Constructor
+5.	Method Overloading 
+6.	Method Overriding
+7.	Abstract Classes and Methods
+8.	Interfaces
+9.	Packages
+
+	Polymorphism: Polymorphism is the capability of a method to do different things based on the object that it is acting upon. In other words, polymorphism allows you define one interface and have multiple implementations.
+	It is a feature that allows one interface to be used for a general class of actions.
+	An operation may exhibit different behavior in different instances.
+	The behavior depends on the types of data used in the operation.
+	It plays an important role in allowing objects having different internal structures to share the same external interface.
+	Polymorphism is extensively used in implementing inheritance.
+
+
+public class Methodoverloadedexample {
+
+	public static void main(String[] args) 
+	{
+		int a=10,b=15,c=20;
+		add(a,b,c);
+		add(a,b);
+  
+	}
+	//here both methods have same name but different parameters is called method overloading
+    static int add(int a,int b, int c) 
+    {
+    	int sum = a+b+c;
+    	System.out.println(" "+sum);
+    	return 0;
+    }
+    
+    static int add(int a, int b)
+    {
+    	int sum2 = a+b;
+    	System.out.println(" "+sum2);
+    	return 0;
+    }
+}
+
+
+
+	Inheritance: Inheritance allows a class to use the properties and methods of another class. In other words, the derived class inherits the states and behaviors from the base class. The derived class is also called subclass and the base class is also known as super-class. The derived class can add its own additional variables and methods. These additional variable and methods differentiates the derived class from the base class.
+	Inheritance is a compile-time mechanism. A super-class can have any number of subclasses. But a subclass can have only one superclass. This is because Java does not support multiple inheritance.
+Let’s consider a superclass Vehicle. Different vehicles have different features and properties however there few of them are common to all. Speed, color, fuel used, size are few which are common to all. Hence we can create a class ‘Vehicle’ with states and actions that are common to all vehicles. The subclass of this superclass can be any type of vehicle. Example: Class Car  A has all the features of a vehicle. But it has its own attributes which makes it different from other subclasses. By using inheritance we need not rewrite the code that we’ve already used with the Vehicle. The subclass can also be extended. We can make a class ‘Sports Car’ which extends ‘Car’. It inherits the features of both ‘Vehicle’ and ‘Car’.
+// A class to display the attributes of the vehicle
+class Vehicle {
+   String color;
+   int speed;
+   int size;
+   void attributes() {
+      System.out.println("Color : " + color);
+      System.out.println("Speed : " + speed);
+      System.out.println("Size : " + size);
+   }
+}
+
+// A subclass which extends for vehicle
+class Car extends Vehicle {
+   int CC;
+   int gears;
+   void attributescar() {
+      // The subclass refers to the members of the superclass
+      System.out.println("Color of Car : " + color);
+      System.out.println("Speed of Car : " + speed);
+      System.out.println("Size of Car : " + size);
+      System.out.println("CC of Car : " + CC);
+      System.out.println("No of gears of Car : " + gears);
+   }
+}
+public class Test {
+   public static void main(String args[]) {
+      Car b1 = new Car();
+      b1.color = "Blue";
+      b1.speed = 200 ;
+      b1.size = 22;
+      b1.CC = 1000;
+      b1.gears = 5;
+      b1.attributescar();
+   }
+}
+
+8. Write a JAVA function to check if a number is prime or not. The function should take input the number to be tested and return true or false if number is prime or not. Test this function with TestNG test cases and upload the output as a text file.
+
+import java.util.Scanner;
+
+public class Primenumber {
+
+	public static void main(String[] args) 
+	{
+      int number ;
+      
+      System.out.println("Please Enter a Number : ");
+      Scanner in = new Scanner(System.in);
+      number = in.nextInt();
+      prime(number);
+      
+      
+	}
+	static void prime(int num)
+	{
+		boolean isPrime = true;
+		for(int i=2;i<=num/2;i++)
+		{
+	       int temp=num%i;
+		   if(temp==0)
+		   {
+		      isPrime=false;
+		      break;
+		   }
+		}
+		if(isPrime)
+		 	  System.out.println(num + " is Prime Number");
+			else
+			   System.out.println(num + " is not Prime Number");  
+	}
+}
+	
+OUTPUT :
+Please Enter a Number : 
+9
+9 is not Prime Number
+
+9. Write a JAVA function to input the month number and return the month string. Test this function with TestNG test cases and upload the output as a text file.
+import java.util.Scanner;
+
+public class MonthExamle {
+
+	public static void main(String[] args) 
+	{
+		
+			int no;
+			System.out.println("Please enter a number greater or equal to 1 and less than or equal to 12 to get which month it is :");
+			Scanner in = new Scanner(System.in);
+			no = in.nextInt();
+		    if(no>=1 && no<=12)
+		     {
+		    	 print_options(no);
+		     }
+		    else
+		     {
+			   System.out.println(" please enter greater than or equal to 1 or lesaa than or equal to 12");
+		     }
+	     }
+
+		static int print_options(int s)
+		{   
+			switch(s)
+			{
+			case 1:
+				System.out.println("January");
+				break;
+			case 2:
+				System.out.println("February");
+				break;
+			case 3:
+				System.out.println("March");
+				break;
+			case 4:
+				System.out.println("April");
+				break;
+			case 5:
+				System.out.println("May");
+				break;
+			case 6:
+				System.out.println("June");
+				break;
+			case 7:
+				System.out.println("July");
+				break;
+			case 8:
+				System.out.println("August");
+				break;
+			case 9:
+				System.out.println("September");
+				break;
+			case 10:
+				System.out.println("October");
+				break;
+			case 11:
+				System.out.println("November");
+				break;
+			case 12:
+				System.out.println("December");
+				break;
+			default:
+			    System.out.println("please enter number from 1 to 12 only");		
+			    break;
+			}
+			return 0;
+	}
+
+}
+
+
+OUTPUT :
+
+Please enter a number greater or equal to 1 and less than or equal to 12 to get which month it is :
+10
+October
+
+Selenium WebDriver 
+
+ PAGE 2 QA Masters - Final Examination
+
+DestinationJ QA Masters
+10.	Write a program to load the webpage at http://store.demoqa.com. The program should select Macbook from the product category and complete all the way to checkout. 
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+//import org.openqa.selenium.support.ui.Select;
+//import org.openqa.selenium.support.ui.Select;
+
+public class FinalExamprogram {
+
+	public static void main(String[] args) 
+	{
+		
+			  WebDriver web = new FirefoxDriver();
+			  web.get("http://store.demoqa.com");
+			  web.manage().window().maximize();
+			  web.findElement(By.linkText("Product Category")).click();
+			  web.findElement(By.xpath(".//*[@id='menu-item-39']")).click();
+     }
+	
+
+}
+
+
+
+SQL
+
+11. Go to http://www.headfirstlabs.com/sql_hands_on/
+
+A.	Run SQL query in the Window to get list of all the tables. Copy and paste the command and the output in your answer sheet.
+
+	SHOW tables;
+Tables_in_handson
+black_book
+boys
+car_table
+clown_info
+cookie_sales
+doughnut_ratings
+drink_info
+easy_drinks
+fish_info
+fish_records
+girls
+hooptie
+movie_table
+movie_table_239
+my_contacts
+my_contacts_229
+my_contacts_A
+my_contacts_B
+one
+projekts
+store_info
+store_inventory
+toy_ids
+toy_info
+toy_other
+toys
+your_table
+
+
+B.	Run SQL query to find all the columns names for table store_inventory. Copy and paste the command and the output in your answer sheet. Which column is the primary key for this table?
+	SHOW COLUMNS FROM store_inventory;
+
+Field	Type	Null	Key	Default	Extra
+toy_id	int(11)	NO		0	
+store_id	int(11)	NO		0	
+inventory	int(11)	NO		0	
+	Field Column is the primary id.
+
+C.	Run SQL query on the table movie_table to print the movie with the highest movie_id value. Copy and paste the command and the output in your answer sheet.
+	SELECT MAX(movie_id)FROM movie_table;
+     
+MAX(movie_id)
+93
+
+
+D. Run SQL query to print all the columns and row data of table toy_info. Copy and paste the command and the output in your answer sheet.
+	SELECT * FROM toy_info;
+toy_id	toy	color	cost	weight
+1	whiffleball	white	1.95	0.30
+2	whiffleball	yellow	2.20	0.40
+3	whiffleball	blue	1.95	0.30
+4	frisbee	green	3.50	0.50
+5	frisbee	yellow	1.50	0.20
+6	kite	red	5.75	1.20
+7	kite	blue	5.75	1.20
+8	kite	green	3.15	0.80
+9	yoyo	white	4.25	0.10
+10	yoyo	yellow	1.50	0.20
+
+E. Run SQL query to print all the columns and row data of table store_inventory. Copy and paste the command and the output in your answer sheet.
+	SELECT * FROM store_inventory;
+
+toy_id	store_id	inventory
+5	1	34
+5	3	12
+5	1	5
+6	2	10
+6	4	24
+9	1	50
+9	2	2
+9	2	18
+12	4	28
+12	4	11
+
+F. Run SQL query to display store_inventory.toy_id, store_inventory.inventory, toy_info.toy using a JOIN operation. Use toy_id as primary and foreign key. Copy and paste the command and the output in your answer sheet .
+	SELECT store_inventory.toy_id,store_inventory.inventory, toy_info.toy_id
+         FROM store_inventory
+         INNER JOIN toy_info
+        ON store_inventory.toy_id = toy_info.toy_id;
+toy_id	inventory	toy_id
+5	34	5
+5	12	5
+5	5	5
+6	10	6
+6	24	6
+9	50	9
+9	2	9
+9	18	9
+
+
+Version control and GIT
+
+12. What are a few advantages of version control? Explain 2 differences between distributed version control and centralized version control. Give examples for each type.
+
+CLIENT –SERVER ENVIRONMENT
+In this environment clients are represented in one tier & data base in other tier.
+In each & every client the presentation layer as well as business layer will be present & in the data base server contain data base layer.
+The disadvantage here is if suppose any updating is needed we need to change data in business layer of each & every client. Therefore we use 3-tier architecture.
+
+DISTRIBUTED ENVIRONMENT
+This is just similar to the web environment, but whenever the number of users are increased the business logic has to be distributed among the number of application server’s in order to distribute the load.
+As one to one application server need to be represented in one tier, it is known as n-tier architecture.
+
+13. List out 5 commonly used GIT commands and their meaning.
+	git init : Initialize an empty git repository under any folder
+	git clone: Instead of creating empty repository, most time we want to start on something already there.
+	git clone: allows to clone repository from someone else.
+	git add : Once the changes are done to some files (or new files are added.
+	git diff : Provides a text based difference from what is present in repo and what is staged.
+
+
+
+
+
+
+
+
+
